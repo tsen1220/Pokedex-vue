@@ -2,15 +2,20 @@
   <div class="wrapper">
     <div class="pokedex">
       <div class="screen">
-        <img class="default" v-bind:src="pokedata.sprites.front_default" />
-        <span id="sp"></span>
+        <img class="default" v-bind:src="img" />
       </div>
       <input class="searchbox" v-model="id" />
       <button class="search" v-on:click="findpokemon(id)">Search</button>
       <ul class="pokedata">
-        <li>ID:{{pokedata.id}}</li>
-        <li>Pokemon Name:{{pokedata.name}}</li>
-        <li>Ability: {{pokedata.abilities[0].ability.name}}</li>
+        <li>ID:{{pkid}}</li>
+        <li>Name:{{name}}</li>
+
+        <li>
+          Ability:
+          <br />
+          <!--eslint-disable-next-line-->
+          <span class="abi" v-for="abi in abilities">{{abi.ability.name}}/</span>
+        </li>
       </ul>
     </div>
   </div>
@@ -21,26 +26,40 @@ export default {
   data () {
     return {
       pokedata: {},
-      id: 1,
-      nodata: null
+      id: null,
+      img: "",
+      pkid: "",
+      name: "",
+      abilities: ""
     };
   },
   methods: {
     findpokemon (id) {
-      this.id = id;
-      fetch("https://pokeapi.co/api/v2/pokemon/" + id, {
-        method: "GET"
-      })
-        .then(res => res.json())
-        .then(data => {
-          this.pokedata = data;
-          console.log(this.pokedata);
-        });
+      if (id < 803 && id > 0) {
+        this.id = id;
+        fetch("https://pokeapi.co/api/v2/pokemon/" + id, {
+          method: "GET"
+        })
+          .then(res => res.json())
+          .then(data => {
+            this.pokedata = data;
+            this.img = data.sprites.front_default;
+            this.pkid = data.id;
+            this.name = data.name;
+            this.abilities = data.abilities;
+          });
+      } else {
+        this.pokedata = "NODATA";
+        this.img = null;
+        this.pkid = "NODATA";
+        this.name = null;
+        this.abilities = null;
+      }
     }
   },
 
-  created () {
-    fetch("https://pokeapi.co/api/v2/pokemon/1")
+  mounted () {
+    fetch("https://pokeapi.co/api/v2/pokemon/")
       .then(res => res.json())
       .then(data => {
         this.pokedata = data;
