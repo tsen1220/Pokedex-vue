@@ -4,7 +4,7 @@
       <div class="screen">
         <img class="default" v-bind:src="img" />
       </div>
-      <input class="searchbox" v-model="id" />
+      <input class="searchbox" v-model.trim="id" />
       <button class="search" v-on:click="findpokemon(id)">Search</button>
       <ul class="pokedata">
         <li>ID:{{pkid}}</li>
@@ -12,9 +12,13 @@
 
         <li>
           Ability:
-          <br />
           <!--eslint-disable-next-line-->
           <span class="abi" v-for="abi in abilities">{{abi.ability.name}}/</span>
+        </li>
+        <li>
+          Types:
+          <!--eslint-disable-next-line-->
+          <span class="abi" v-for="type in types">{{type.type.name}}/</span>
         </li>
       </ul>
     </div>
@@ -30,13 +34,13 @@ export default {
       img: "",
       pkid: "",
       name: "",
-      abilities: ""
+      abilities: "",
+      types: ""
     };
   },
   methods: {
     findpokemon (id) {
       if (id < 803 && id > 0) {
-        this.id = id;
         fetch("https://pokeapi.co/api/v2/pokemon/" + id, {
           method: "GET"
         })
@@ -47,6 +51,7 @@ export default {
             this.pkid = data.id;
             this.name = data.name;
             this.abilities = data.abilities;
+            this.types = data.types;
           });
       } else {
         this.pokedata = "NODATA";
@@ -54,6 +59,7 @@ export default {
         this.pkid = "NODATA";
         this.name = null;
         this.abilities = null;
+        this.types = null;
       }
     }
   },
