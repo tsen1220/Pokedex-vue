@@ -12,12 +12,13 @@
 
         <li>
           Ability:
-          <span class="abi" :key="abi" v-for="abi in abilities">{{abi.ability.name}}/</span>
+          <!--eslint-disable-next-line-->
+          <span class="abi" :key="abi.name" v-for="abi in abilities">{{abi.ability.name}}/</span>
         </li>
         <li>
           Types:
           <!--eslint-disable-next-line-->
-          <span class="abi" :key="type" v-for="type in types">{{type.type.name}}/</span>
+          <span class="type" :key="type.name" v-for="type in types">{{type.type.name}}/</span>
         </li>
       </ul>
     </div>

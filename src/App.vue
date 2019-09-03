@@ -30,10 +30,9 @@ export default {
 body {
   background: url(https://wallpapercave.com/wp/VHH1EMf.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
-.row {
-  background: red;
-}
+
 .route {
   font-size: 30px;
 }
