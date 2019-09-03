@@ -76,18 +76,28 @@ export default {
 
 <style lang="css">
 .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
+
 .pokedex {
   position: relative;
   width: 786px;
   height: 577px;
   background: url("http://brezomadrid.es/Codepen-resources/img/pokedex.png")
     no-repeat;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
+
 .screen {
   width: 237px;
   height: 158px;
@@ -96,9 +106,12 @@ export default {
   top: 169px;
   left: 73px;
   border-radius: 10px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: center;
 }
+
 .searchbox {
   width: 112px;
   height: 40px;
@@ -109,6 +122,7 @@ export default {
   font-size: 30px;
   text-align: center;
 }
+
 .pokedata {
   background: #000000;
   display: block;
@@ -123,6 +137,7 @@ export default {
   z-index: 2;
   list-style: none;
 }
+
 .search {
   position: absolute;
   height: 32px;
@@ -137,15 +152,10 @@ export default {
   right: 95px;
   bottom: 83px;
 }
+
 .default {
   position: relative;
   top: 20%;
   width: 50%;
-}
-
-#sp {
-  font-size: 50px;
-  position: relative;
-  top: 20%;
 }
 </style>

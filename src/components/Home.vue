@@ -1,5 +1,7 @@
 <template>
-  <div class="HelloPokemon">{{msg}}</div>
+  <div class="HelloPokemon">
+    <span>{{msg}}</span>
+  </div>
 </template>
 
 <script>

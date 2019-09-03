@@ -1,8 +1,10 @@
 <template>
   <div>
-    <input type="text" v-model="id" />
-    <button v-on:click="findpokemon(id);Tenpoke(id)">Search</button>
-
+    <div class="find">
+      <div style="font-size:30px;font-weight:bold">寶可夢圖鑑</div>
+      <input type="text" v-model="id" />
+      <button v-on:click="findpokemon(id);Tenpoke(id)">Search</button>
+    </div>
     <table class="table table-dark table-hover table-one">
       <thead class="thead-dark">
         <tr>
@@ -10,6 +12,7 @@
           <th scope="col">Name</th>
           <th scope="col">Types</th>
           <th scope="col">Forms</th>
+          <th scope="col">Abilities</th>
         </tr>
       </thead>
       <tbody>
@@ -22,11 +25,14 @@
           <td>
             <img :src="img" />
           </td>
+          <td>
+            <div :key="abi.name" v-for="abi in abilities">{{abi.ability.name}}</div>
+          </td>
         </tr>
       </tbody>
     </table>
 
-    <table class="table table-dark table-hover table-all">
+    <table class="table table-dark table-hover table-ten">
       <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
@@ -90,21 +96,23 @@ export default {
     Tenpoke(id) {
       var pid = parseInt(id);
       this.tenpoke = [];
-      if (pid > 5 && pid < 788) {
-        for (let i = pid - 5; i < pid + 5; i++) {
-          fetch("https://pokeapi.co/api/v2/pokemon/" + i, {
-            method: "GET"
-          })
-            .then(res => res.json())
-            .then(data => {
-              this.tenpoke.push({
-                pkid: data.id,
-                name: data.name,
-                img: data.sprites.front_default
+      setTimeout(() => {
+        if (pid > 5 && pid < 788) {
+          for (let i = pid - 5; i < pid + 5; i++) {
+            fetch("https://pokeapi.co/api/v2/pokemon/" + i, {
+              method: "GET"
+            })
+              .then(res => res.json())
+              .then(data => {
+                this.tenpoke.push({
+                  pkid: data.id,
+                  name: data.name,
+                  img: data.sprites.front_default
+                });
               });
-            });
+          }
         }
-      }
+      }, 500);
     }
   },
 
@@ -119,21 +127,32 @@ export default {
 </script>
 
 <style lang="css">
-.table-all {
+.table-ten {
   width: 500px;
+  height: 130px;
   position: absolute;
-  right: 0px;
+  left: 1030px;
   top: 0px;
   opacity: 0.8;
+  text-align: center;
+  vertical-align: center;
 }
+
 .table-one {
   width: 600px;
   height: 130px;
   position: absolute;
-  left: 50px;
+  left: 250px;
   top: 300px;
   opacity: 1;
   text-align: center;
   vertical-align: center;
+}
+
+.find {
+  position: absolute;
+  left: 250px;
+  top: 200px;
+  z-index: 2;
 }
 </style>

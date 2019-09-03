@@ -1,0 +1,24 @@
+.table-all {
+  width: 330px;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  opacity: 0.8;
+}
+.table-one {
+  width: 600px;
+  height: 130px;
+  position: absolute;
+  left: 250px;
+  top: 300px;
+  opacity: 1;
+  text-align: center;
+  vertical-align: center;
+}
+.find {
+  position: absolute;
+  left: 250px;
+  top: 200px;
+  z-index: 2;
+}
