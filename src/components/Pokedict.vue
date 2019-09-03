@@ -5,7 +5,7 @@
       <input type="text" v-model="id" />
       <button v-on:click="findpokemon(id);Tenpoke(id)">Search</button>
     </div>
-    <table class="table table-dark table-hover table-one">
+    <table class="table-dark table-hover table-one">
       <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
@@ -26,13 +26,13 @@
             <img :src="img" />
           </td>
           <td>
-            <div :key="abi.name" v-for="abi in abilities">{{abi.ability.name}}</div>
+            <div :key="abi.name" v-for="abi in abilities">{{abi.ability.name}}/</div>
           </td>
         </tr>
       </tbody>
     </table>
 
-    <table class="table table-dark table-hover table-ten">
+    <table class="table-dark table-hover table-ten">
       <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
