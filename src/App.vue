@@ -8,7 +8,7 @@
         <router-link :class="routers" to="Pokedex">Pokedex</router-link>
       </li>
       <li class="nav-item">
-        <router-link :class="routers" to="Pokedex">PokeDict</router-link>
+        <router-link :class="routers" to="PokeDict">PokeDict</router-link>
       </li>
     </ul>
     <router-view />
@@ -27,6 +27,10 @@ export default {
 </script>
 
 <style lang="css">
+body {
+  background: url(https://wallpapercave.com/wp/VHH1EMf.jpg);
+  background-size: cover;
+}
 .row {
   background: red;
 }
