@@ -10,11 +10,13 @@
 
 請先安裝 modules 來使用。
 
-如果你喜歡，請給我一顆星，我會很感謝你。 If you like this, please give me a star. Thank you!!
+
 
 ```
 npm install
 ```
+
+如果你喜歡，請給我一顆星，我會很感謝你。 If you like this, please give me a star. Thank you!!
 
 # 寶可夢查詢(圖鑑版本)
 
