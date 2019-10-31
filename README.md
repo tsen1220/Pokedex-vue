@@ -10,6 +10,8 @@
 
 請先安裝 modules 來使用。
 
+如果你喜歡，請給我一顆星，我會很感謝你。 If you like this, please give me a star. Thank you!!
+
 ```
 npm install
 ```
@@ -25,3 +27,32 @@ npm install
 ---
 
 <img src='https://raw.githubusercontent.com/tsen1220/pokedex-vue/master/src/assets/introduction1.jpg' alt=''>
+
+
+API資料處理方面就不贅述。
+
+下為router設定。
+
+```
+Vue router setting:
+
+  routes: [
+    {
+      path: "/",
+      name: "Home",
+      component: Home
+    },
+    {
+      path: "/Pokedex",
+      name: "Pokedex",
+      component: Pokedex
+    },
+    {
+      path: "/PokeDict",
+      name: "PokeDict",
+      component: PokeDict
+    }
+  ]
+
+
+```
