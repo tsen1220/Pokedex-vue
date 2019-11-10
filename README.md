@@ -1,4 +1,4 @@
-# 寶可夢圖鑑
+# 寶可夢圖鑑/Pokedex
 
 ---
 
@@ -10,30 +10,37 @@
 
 請先安裝 modules 來使用。
 
+This is a SPA developed by Vue.
 
+Concatenate Pokemon's Restful API.
+
+Users can enter the Pokemon index to get the pokemon info.
+
+First, you need to install the modules.
 
 ```
 npm install
 ```
 
-如果你喜歡，請給我一顆星，我會很感謝你。 If you like this, please give me a star. Thank you!!
+如果你喜歡，請給我一顆星，我會很感謝你。
 
-# 寶可夢查詢(圖鑑版本)
+If you like this, please give me a star. Thank you!!
+
+# 寶可夢查詢(圖鑑版本)/Pokedex
 
 ---
 
 <img src='https://raw.githubusercontent.com/tsen1220/pokedex-vue/master/src/assets/introduction.jpg' alt=''>
 
-# 寶可夢查詢
+# 寶可夢查詢/PokeDictionary
 
 ---
 
 <img src='https://raw.githubusercontent.com/tsen1220/pokedex-vue/master/src/assets/introduction1.jpg' alt=''>
 
+API 資料處理方面就不贅述。
 
-API資料處理方面就不贅述。
-
-下為router設定。
+下為 router 設定。
 
 ```
 Vue router setting:
