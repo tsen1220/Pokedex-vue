@@ -91,8 +91,7 @@ export default {
   position: relative;
   width: 786px;
   height: 577px;
-  background: url("http://brezomadrid.es/Codepen-resources/img/pokedex.png")
-    no-repeat;
+  background: url("../assets/pokedex.png") no-repeat;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
