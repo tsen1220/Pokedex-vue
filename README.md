@@ -19,7 +19,7 @@ Users can enter the Pokemon index to get the pokemon info.
 First, you need to install the modules.
 
 ```
-npm install
+$ npm install
 ```
 
 如果你喜歡，請給我一顆星，我會很感謝你。
