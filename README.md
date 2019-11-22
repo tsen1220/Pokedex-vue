@@ -22,7 +22,7 @@ First, you need to install the modules.
 $ npm install
 ```
 
-如果你喜歡，請給我一顆星，我會很感謝你。
+如果你喜歡，請給我一顆星，感謝你。
 
 If you like this, please give me a star. Thank you!!
 
@@ -37,8 +37,6 @@ If you like this, please give me a star. Thank you!!
 ---
 
 <img src='https://raw.githubusercontent.com/tsen1220/pokedex-vue/master/src/assets/introduction1.jpg' alt=''>
-
-API 資料處理方面就不贅述。
 
 下為 router 設定。
 
