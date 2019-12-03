@@ -22,10 +22,6 @@ First, you need to install the modules.
 $ npm install
 ```
 
-如果你喜歡，請給我一顆星，感謝你。
-
-If you like this, please give me a star. Thank you!!
-
 # 寶可夢查詢(圖鑑版本)/Pokedex
 
 ---
