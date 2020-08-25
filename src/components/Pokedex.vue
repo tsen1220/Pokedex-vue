@@ -9,7 +9,6 @@
       <ul class="pokedata">
         <li>ID:{{pkid}}</li>
         <li>Name:{{name}}</li>
-
         <li>
           Ability:
           <!--eslint-disable-next-line-->
@@ -63,7 +62,6 @@ export default {
       }
     }
   },
-
   mounted() {
     fetch("https://pokeapi.co/api/v2/pokemon/")
       .then(res => res.json())
